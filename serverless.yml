@@ -1,0 +1,30 @@
+# Welcome to serverless. Read the docs
+# https://serverless.com/framework/docs/
+
+# Serverless.yml is the configuration the CLI
+# uses to deploy your code to your provider of choice
+
+# The `service` block is the name of the service
+service: lambda
+
+plugins:
+  - serverless-offline
+
+frameworkVersion: '3'
+
+# The `provider` block defines where your service will be deployed
+provider:
+  name: aws
+  runtime: nodejs12.x
+  region: eu-west-1
+
+# The `functions` block defines what code to deploy
+functions:
+  getCurrentWeather:
+    handler: handler.getCurrentWeather
+    # The `events` block defines how to trigger the handler.helloWorld code
+    events:
+      - http:
+          path: get-weather
+          method: get
+          cors: true

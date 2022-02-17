@@ -1,0 +1,13 @@
+{
+  "name": "lambda",
+  "version": "1.0.0",
+  "dependencies": {
+    "aws-sdk": "^2.1075.0",
+    "axios": "^0.26.0",
+    "bluebird": "^3.5.1",
+    "express": "^4.17.2",
+    "ioredis": "^4.28.5",
+    "node-fetch": "2.0",
+    "redis": "^2.8.0"
+  }
+}
